@@ -45,6 +45,11 @@ public abstract class AbstractShape implements Shape
     
     abstract public void stretchBy(double factor);
     
+    public String toString()
+    {
     String str = "(X,Y) Position: (" + xPos + "," + yPos + ") \n"
 			+ "Area: " + area();
+    
+    return str;
+    }
 }
