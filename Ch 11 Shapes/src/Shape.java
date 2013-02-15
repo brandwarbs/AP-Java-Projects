@@ -3,6 +3,7 @@ import TurtleGraphics.Pen;
 public interface Shape 
 {
    public double area();
+   public double parameter();
    public void   draw (Pen p);
    public double getXPos();
    public double getYPos();

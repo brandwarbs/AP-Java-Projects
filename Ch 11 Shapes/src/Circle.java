@@ -3,8 +3,7 @@ import TurtleGraphics.Pen;
 public class Circle extends AbstractShape 
 {
 
-   protected double xPos;
-   protected double yPos;
+   
    protected double radius;
 
    public Circle() 
@@ -22,6 +21,11 @@ public class Circle extends AbstractShape
    public double area() 
    {
       return Math.PI * radius * radius;
+   }
+   
+   public double parameter() 
+   {
+      return 2 * Math.PI * radius;
    }
 
    public void draw (Pen p) 
@@ -48,8 +52,7 @@ public class Circle extends AbstractShape
    {
       String str = "CIRCLE\n"
                  + "Radius: " + radius + "\n"
-                 + "(X,Y) Position: (" + xPos + "," + yPos + ")\n" 
-                 + "Area: " + area();
+                 + super.toString();
       return str;
    }
 }

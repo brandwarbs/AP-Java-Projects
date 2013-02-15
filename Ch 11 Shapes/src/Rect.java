@@ -3,7 +3,7 @@ import TurtleGraphics.Pen;
 public class Rect extends AbstractShape 
 {
 
-   private double xPos, yPos;
+   
    private double height, width;
 
    public Rect() 
@@ -23,6 +23,11 @@ public class Rect extends AbstractShape
    public double area() 
    {
       return height * width;
+   }
+   
+   public double parameter() 
+   {
+      return 2 * height + 2 * width;
    }
 
    public void draw (Pen p)

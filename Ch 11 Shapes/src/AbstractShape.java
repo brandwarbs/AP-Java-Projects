@@ -26,6 +26,8 @@ public abstract class AbstractShape implements Shape
     
     abstract public double area();
     
+    abstract public double parameter();
+    
     abstract public void draw(Pen p);
     
     public final double getXPos()
@@ -49,7 +51,8 @@ public abstract class AbstractShape implements Shape
     public String toString()
     {
     String str = "(X,Y) Position: (" + xPos + "," + yPos + ") \n"
-			+ "Area: " + area();
+			+ "Area: " + area() + "\n"
+			+ "Parameter: " + parameter();
     
     return str;
     }
