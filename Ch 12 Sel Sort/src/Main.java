@@ -6,22 +6,24 @@ public class Main {
 	 */
 	public static void main(String[] args) 
 	{
-		double[] array1 = {1.0, 4.4, 1.9, 2.9, 3.4, 3.5};
-		double tempInd;
+		double[] array1 = {5.0, 4.4, 1.9, 2.9, 3.4, 3.5};
+		int tempIndex;
 		
 		//selectionSort(array1);
-		tempNum = findMaximum(array1, array1.length - 1);
-		System.out.println(tempNum);
+		tempIndex = findMaximum(array1, 0);
+		System.out.println(tempIndex);
+		printArray(array1.length, array1);
+		selectionSort(array1);
 		printArray(array1.length, array1);
 		
 	}
 	
 	public static void selectionSort(double[] a)
 	{
-		for (int i = a.length; i < 0 - 1; i--)
+		for (int i = a.length - 1; i > 0; i--)
 		{
 			int maxIndex = findMaximum(a, i);
-			if (maxIndex == i)
+			if (maxIndex != i)
 				swap(a, i, maxIndex);
 		}
 	}
