@@ -2,18 +2,20 @@
 public class Main {
 
 	/**
-	 * @param args
+	 * 
+	 * 
+	 * @author Brandon Warbelton
+	 * 
+	 * 2/19/2013
 	 */
 	public static void main(String[] args) 
 	{
 		double[] array1 = {5.0, 4.4, 1.9, 2.9, 3.4, 3.5};
-		int tempIndex;
 		
-		//selectionSort(array1);
-		tempIndex = findMaximum(array1, 0);
-		System.out.println(tempIndex);
+		System.out.print("Original: ");
 		printArray(array1.length, array1);
 		selectionSort(array1);
+		System.out.print("Final: ");
 		printArray(array1.length, array1);
 		
 	}
@@ -33,12 +35,14 @@ public class Main {
 		double temp = a[x];
 		a[x] = a[y];
 		a[y] = temp;
+		System.out.print("Swap: ");
+		printArray(a.length, a);
 	}
 
-	public static int findMaximum(double[] a, int first) 
+	public static int findMaximum(double[] a, int last) 
 	{
-		int maxIndex = first;
-		for (int i = first + 1; i < a.length ; i++)
+		int maxIndex = last;
+		for (int i = last; i >= 0 ; i--)
 		{
 			if (a[i] > a[maxIndex])
 				maxIndex = i;
