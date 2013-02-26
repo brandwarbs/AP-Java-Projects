@@ -16,4 +16,18 @@ public class ArrayList
 	{
 		someArray = ary;
 	}
+	
+	public String toString()
+	{
+		String str = "";
+		for (int i = 0; i < someArray.length; i++)
+		{
+			if (i != someArray.length - 1)
+				str += someArray[i] + ", ";
+			else
+				str += someArray[i]; 
+		}
+
+		return str;
+	}
 }
