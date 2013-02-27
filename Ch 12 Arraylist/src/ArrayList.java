@@ -1,18 +1,18 @@
 
 public class ArrayList 
 {
-	int[] someArray;
+	Object[] someArray;
 	public ArrayList()
 	{
-		someArray = new int[5];
+		someArray = new Object[5];
 	}
 	
 	public ArrayList(int size)
 	{
-		someArray = new int[size];
+		someArray = new Object[size];
 	}
 	
-	public ArrayList(int[] ary)
+	public ArrayList(Object[] ary)
 	{
 		someArray = ary;
 	}
@@ -20,12 +20,31 @@ public class ArrayList
 	public String toString()
 	{
 		String str = "";
+		boolean isNull = false;
+		
 		for (int i = 0; i < someArray.length; i++)
 		{
-			if (i != someArray.length - 1)
-				str += someArray[i] + ", ";
-			else
-				str += someArray[i]; 
+			if(someArray[i] == null)
+			{
+				isNull = true;
+				break;
+			}
+				
+		}
+		
+		if(!isNull)
+		{
+			for (int i = 0; i < someArray.length; i++)
+			{
+				if (i != someArray.length - 1)
+					str += someArray[i].toString() + ", ";
+				else
+					str += someArray[i].toString(); 
+			}
+		}
+		else
+		{
+			str = "Array has a empty element";
 		}
 
 		return str;
