@@ -49,4 +49,23 @@ public class ArrayList
 
 		return str;
 	}
+	
+	public int size()
+	{
+		int theSize = 0;
+		for (int i = 0; i < someArray.length; i++)
+		{
+		if(someArray[i] == null)
+			break;
+		else
+			theSize++;
+		}
+		
+		return theSize;
+	}
+	
+	public Object get(int pos)
+	{
+		return someArray[pos];
+	}
 }
