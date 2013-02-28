@@ -78,8 +78,20 @@ public class ArrayList
 	
 	public boolean add(int index, Object theObject)
 	{
+		boolean isTrue = true;
+		
+		if(index < 0)
+		{
+			index = 0;
+			isTrue = false;
+		}
+		else if(index > someArray.length - 1)
+		{
+			index = someArray.length - 1;
+			isTrue = false;
+		}
 		someArray[index] = theObject;
 		
-		return true;
+		return isTrue;
 	}
 }
