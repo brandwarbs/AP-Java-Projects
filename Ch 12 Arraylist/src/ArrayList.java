@@ -64,8 +64,22 @@ public class ArrayList
 		return theSize;
 	}
 	
-	public Object get(int pos)
+	public Object get(int index)
 	{
-		return someArray[pos];
+		return someArray[index];
+	}
+	
+	public Object remove(int index)
+	{
+		Object someObject = someArray[index];
+		someArray[index] = null;
+		return someObject;
+	}
+	
+	public boolean add(int index, Object theObject)
+	{
+		someArray[index] = theObject;
+		
+		return true;
 	}
 }
