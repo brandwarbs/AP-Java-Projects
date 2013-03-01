@@ -83,14 +83,16 @@ public class ArrayList
 		if(index < 0)
 		{
 			index = 0;
-			isTrue = false;
 		}
 		else if(index > someArray.length - 1)
 		{
 			index = someArray.length - 1;
-			isTrue = false;
 		}
-		someArray[index] = theObject;
+		
+		if(someArray[index] == null)
+			someArray[index] = theObject;
+		else
+			isTrue = false;
 		
 		return isTrue;
 	}

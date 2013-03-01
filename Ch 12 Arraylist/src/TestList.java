@@ -21,6 +21,8 @@ public class TestList {
 		System.out.println("1 of list 3: " + list3.get(0));
 		
 		System.out.println(list3.toString() + " | " + list3.size());
+		System.out.println(list3.add(1, "Sarah"));
+		System.out.println(list3.toString() + " | " + list3.size());
 	}
 
 }
