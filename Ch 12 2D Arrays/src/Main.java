@@ -19,6 +19,18 @@ public class Main {
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
 	{
+		
+		
 		return null;
 	}
+	
+	public static boolean canAdd(int[][] trix1, int[][] trix2)
+	{
+		boolean size = true;
+		
+		for(int i = 0)
+		
+		return size;
+	}
+	
 }
