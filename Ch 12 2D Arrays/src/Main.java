@@ -25,6 +25,10 @@ public class Main {
 		System.out.println(stringMatrix(addMatrix(m2, m4)));
 		System.out.println(stringMatrix(addMatrix(m3, m4)));
 		System.out.println(stringMatrix(addMatrix(m1, m4)));
+		System.out.println(canMultiply(m3, m4));
+		System.out.println(canMultiply(m1, m2));
+		System.out.println(canMultiply(m3, m2));
+		System.out.println(canMultiply(m1, m4));
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
@@ -85,6 +89,20 @@ public class Main {
 		}
 
 		return str;
+	}
+	
+	public static boolean canMultiply(int[][] trix1, int[][] trix2)
+	{
+		boolean size = true;
+		int firstSize = trix2.length;
+		
+		for(int i = 0; i < trix1.length; i++)
+		{
+			if(firstSize != trix1[i].length)
+				size = false;
+		}
+		
+		return size;
 	}
 	
 }
