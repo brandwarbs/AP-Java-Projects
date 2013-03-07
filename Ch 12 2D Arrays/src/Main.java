@@ -2,7 +2,6 @@
 public class Main {
 	
 	
-	protected static boolean isNull = false;
 	/**
 	 * @param args
 	 */
@@ -22,15 +21,15 @@ public class Main {
 		System.out.println(canAdd(m1, m2));
 		System.out.println(canAdd(m3, m2));
 		System.out.println(canAdd(m1, m4));
-		System.out.print(stringMatrix(addMatrix(m3, m4)));
-		System.out.print(stringMatrix(addMatrix(m2, m4)));
-		System.out.print(stringMatrix(addMatrix(m3, m4)));
-		System.out.print(stringMatrix(addMatrix(m1, m4)));
+		System.out.println(stringMatrix(addMatrix(m3, m4)));
+		System.out.println(stringMatrix(addMatrix(m2, m4)));
+		System.out.println(stringMatrix(addMatrix(m3, m4)));
+		System.out.println(stringMatrix(addMatrix(m1, m4)));
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
 	{
-		isNull = false;
+		int[][] aMatrix = {{0, 0},{0, 0}};
 		if(canAdd(matrix1, matrix2))
 		{
 			int[][] theMatrix = new int[matrix1.length][matrix1.length];
@@ -44,8 +43,9 @@ public class Main {
 			
 			return theMatrix;
 		}
-		isNull = true;
-		return null;
+		
+		
+		return aMatrix;
 	}
 	
 	public static boolean canAdd(int[][] trix1, int[][] trix2)
@@ -72,23 +72,18 @@ public class Main {
 	public static String stringMatrix(int[][] mat)
 	{
 		String str = "";
-		if(isNull)
+
+
+		for(int i = 0; i < mat.length; i++)
 		{
-			str = "null\n";
+			for(int u = 0; u < mat[i].length; u++)
+			{
+				str += mat[i][u] + " "; 
+			}
+			if(i != mat.length - 1)
+				str += "\n";
 		}
 
-		else
-		{
-			for(int i = 0; i < mat.length; i++)
-			{
-				for(int u = 0; u < mat[i].length; u++)
-				{
-					str += mat[i][u] + " "; 
-				}
-				str += "\n";
-			}
-		}
-		
 		return str;
 	}
 	
