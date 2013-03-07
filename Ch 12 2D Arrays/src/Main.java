@@ -29,6 +29,7 @@ public class Main {
 		System.out.println(canMultiply(m1, m2));
 		System.out.println(canMultiply(m3, m2));
 		System.out.println(canMultiply(m1, m4));
+		System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
@@ -103,6 +104,35 @@ public class Main {
 		}
 		
 		return size;
+	}
+	
+	public static int[][] multiplyMatrix(int[][] matrix1, int[][] matrix2)
+	{
+		int[][] aMatrix = {{0, 0},{0, 0}};
+		if(canMultiply(matrix1, matrix2))
+		{
+			int[][] theMatrix = new int[matrix1.length][matrix2[0].length];
+			int sum = 0;
+					
+	         for (int c = 0 ; c < matrix1.length ; c++ )
+	         {
+	            for (int d = 0 ; d < matrix2[0].length ; d++ )
+	            {   
+	               for (int k = 0 ; k < matrix2.length ; k++ )
+	               {
+	                  sum = sum + matrix1[c][k]*matrix2[k][d];
+	               }
+	 
+	               theMatrix[c][d] = sum;
+	               sum = 0;
+	            }
+	         }
+			
+			return theMatrix;
+		}
+		
+		
+		return aMatrix;
 	}
 	
 }
