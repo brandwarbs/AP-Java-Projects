@@ -16,20 +16,21 @@ public class Main {
 					{3, 4}};
 		int[][] m4 = {{-2, 4},
 					{7, 3}};
-		
+		System.out.println(stringMatrix(m1));
 		System.out.println(canAdd(m3, m4));
 		System.out.println(canAdd(m1, m2));
 		System.out.println(canAdd(m3, m2));
 		System.out.println(canAdd(m1, m4));
 		System.out.println(stringMatrix(addMatrix(m3, m4)));
-		System.out.println(stringMatrix(addMatrix(m2, m4)));
-		System.out.println(stringMatrix(addMatrix(m3, m4)));
+		System.out.println(stringMatrix(addMatrix(m1, m2)));
+		System.out.println(stringMatrix(addMatrix(m3, m2)));
 		System.out.println(stringMatrix(addMatrix(m1, m4)));
 		System.out.println(canMultiply(m3, m4));
 		System.out.println(canMultiply(m1, m2));
 		System.out.println(canMultiply(m3, m2));
 		System.out.println(canMultiply(m1, m4));
 		System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
+		System.out.println(stringMatrix(multiplyMatrix(m3, m4)));
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
