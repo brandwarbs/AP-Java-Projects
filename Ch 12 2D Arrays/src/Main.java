@@ -78,7 +78,14 @@ public class Main {
 	public static String stringMatrix(int[][] mat)
 	{
 		String str = "";
-
+		String line = "";
+		
+		for(int w = 0; w < mat[0].length; w++)
+		{
+			line += "~~";
+		}
+		
+		str += line + "\n";
 
 		for(int i = 0; i < mat.length; i++)
 		{
@@ -89,6 +96,8 @@ public class Main {
 			if(i != mat.length - 1)
 				str += "\n";
 		}
+		
+		str += "\n" + line;
 
 		return str;
 	}
