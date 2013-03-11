@@ -26,3 +26,17 @@ public class TestList {
 	}
 
 }
+
+/*
+Array has a empty element | 0
+Array has a empty element | 0
+Fred, George, Tom | 3
+1 of list 3: Fred
+remove 1 of list 3: Fred
+1 of list 3: null
+true
+1 of list 3: Tony
+Tony, George, Tom | 3
+false
+Tony, George, Tom | 3
+*/
