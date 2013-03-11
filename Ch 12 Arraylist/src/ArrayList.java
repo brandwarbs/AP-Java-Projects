@@ -1,4 +1,10 @@
 
+/**
+ * 
+ * @author Brandon Warbelton
+ *
+ */
+
 public class ArrayList 
 {
 	Object[] someArray;
