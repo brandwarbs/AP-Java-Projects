@@ -16,26 +16,30 @@ public class Main {
 					{3, 4}};
 		int[][] m4 = {{-2, 4},
 					{7, 3}};
-		System.out.println(stringMatrix(m1));
+		
 		System.out.println(canAdd(m3, m4));
 		System.out.println(canAdd(m1, m2));
 		System.out.println(canAdd(m3, m2));
 		System.out.println(canAdd(m1, m4));
-		System.out.println(stringMatrix(addMatrix(m3, m4)));
 		System.out.println(stringMatrix(addMatrix(m1, m2)));
-		System.out.println(stringMatrix(addMatrix(m3, m2)));
-		System.out.println(stringMatrix(addMatrix(m1, m4)));
+		System.out.println(stringMatrix(addMatrix(m3, m2)));		
 		System.out.println(canMultiply(m3, m4));
 		System.out.println(canMultiply(m1, m2));
 		System.out.println(canMultiply(m3, m2));
 		System.out.println(canMultiply(m1, m4));
-		System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
+		System.out.println(stringMatrix(m1));
+		
 		System.out.println(stringMatrix(multiplyMatrix(m3, m4)));
+		System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
+		System.out.println(stringMatrix(multiplyMatrix(m2, m1)));
+		System.out.println(stringMatrix(multiplyMatrix(m1, m3)));
+		System.out.println(stringMatrix(addMatrix(m3, m4)));
+		System.out.println(stringMatrix(addMatrix(m1, m4)));
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
 	{
-		int[][] aMatrix = {{0, 0},{0, 0}};
+		int[][] aMatrix = {{0, 0},{0, 0}};	//this is if you can't add
 		if(canAdd(matrix1, matrix2))
 		{
 			int[][] theMatrix = new int[matrix1.length][matrix1.length];
@@ -118,7 +122,7 @@ public class Main {
 	
 	public static int[][] multiplyMatrix(int[][] matrix1, int[][] matrix2)
 	{
-		int[][] aMatrix = {{0, 0},{0, 0}};
+		int[][] aMatrix = {{0, 0},{0, 0}};	//this is if you can't multiply
 		if(canMultiply(matrix1, matrix2))
 		{
 			int[][] theMatrix = new int[matrix1.length][matrix2[0].length];
