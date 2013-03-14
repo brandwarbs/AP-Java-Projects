@@ -16,21 +16,21 @@ public class Main {
 					{3, 4}};
 		int[][] m4 = {{-2, 4},
 					{7, 3}};
+		System.out.println("M3 X M4 =");
+		if(canMultiply(m3, m4))
+		{
+			System.out.println(stringMatrix(multiplyMatrix(m3, m4)));
+		}
+		else
+			System.out.println("Can't Multiply");
+		System.out.println("M1 X M2 =");
+		if(canMultiply(m1, m2))
+		{
+			System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
+		}
+		else
+			System.out.println("Can't Multiply");
 		
-		System.out.println(canAdd(m3, m4));
-		System.out.println(canAdd(m1, m2));
-		System.out.println(canAdd(m3, m2));
-		System.out.println(canAdd(m1, m4));
-		System.out.println(stringMatrix(addMatrix(m1, m2)));
-		System.out.println(stringMatrix(addMatrix(m3, m2)));		
-		System.out.println(canMultiply(m3, m4));
-		System.out.println(canMultiply(m1, m2));
-		System.out.println(canMultiply(m3, m2));
-		System.out.println(canMultiply(m1, m4));
-		System.out.println(stringMatrix(m1));
-		
-		System.out.println(stringMatrix(multiplyMatrix(m3, m4)));
-		System.out.println(stringMatrix(multiplyMatrix(m1, m2)));
 		System.out.println(stringMatrix(multiplyMatrix(m2, m1)));
 		System.out.println(stringMatrix(multiplyMatrix(m1, m3)));
 		System.out.println(stringMatrix(addMatrix(m3, m4)));
