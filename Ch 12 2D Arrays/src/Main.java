@@ -30,11 +30,34 @@ public class Main {
 		}
 		else
 			System.out.println("Can't Multiply");
-		
-		System.out.println(stringMatrix(multiplyMatrix(m2, m1)));
-		System.out.println(stringMatrix(multiplyMatrix(m1, m3)));
-		System.out.println(stringMatrix(addMatrix(m3, m4)));
-		System.out.println(stringMatrix(addMatrix(m1, m4)));
+		System.out.println("M2 X M1 =");
+		if(canMultiply(m2, m1))
+		{
+			System.out.println(stringMatrix(multiplyMatrix(m2, m1)));
+		}
+		else
+			System.out.println("Can't Multiply");
+		System.out.println("M1 X M3 =");
+		if(canMultiply(m1, m3))
+		{
+			System.out.println(stringMatrix(multiplyMatrix(m1, m3)));
+		}
+		else
+			System.out.println("Can't Multiply");
+		System.out.println("M3 + M4 =");
+		if(canAdd(m3, m4))
+		{
+			System.out.println(stringMatrix(addMatrix(m3, m4)));
+		}
+		else
+			System.out.println("Can't Add");
+		System.out.println("M1 + M4 =");
+		if(canAdd(m1, m4))
+		{
+			System.out.println(stringMatrix(addMatrix(m1, m4)));
+		}
+		else
+			System.out.println("Can't Add");
 	}
 
 	public static int[][] addMatrix(int[][] matrix1, int[][] matrix2)
