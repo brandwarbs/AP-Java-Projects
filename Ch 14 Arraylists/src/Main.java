@@ -41,7 +41,7 @@ public class Main {
 			if (i != list.size() - 1)
 				str += list.get(i) + " ";
 			else
-				str += list.get(i) + "."; 
+				str += list.get(i); 
 		}
 		
 		System.out.println(str);
@@ -50,5 +50,14 @@ public class Main {
 	public static void sort(ArrayList<String> list)
 	{
 		
+		for(int i = 0; i < list.size(); i++)
+		{
+			int u = 0;
+			
+			if(list.get(i).equals(list.get(u)))
+				{
+				
+				}
+			}
 	}
 }
