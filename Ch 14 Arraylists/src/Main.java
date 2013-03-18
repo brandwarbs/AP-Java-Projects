@@ -31,6 +31,8 @@ public class Main {
 		
 		
 		printArrayList(sentenceList);
+		sort(sentenceList);
+		printArrayList(sentenceList);
 	}
 
 	public static void printArrayList(ArrayList<String> list)
@@ -49,15 +51,17 @@ public class Main {
 	
 	public static void sort(ArrayList<String> list)
 	{
+		String tmp = "";
 		
-		for(int i = 0; i < list.size(); i++)
+		for(int i = 1; i < list.size(); i++)
 		{
-			int u = 0;
-			
-			if(list.get(i).equals(list.get(u)))
+			for(int u = 0; u < list.size(); u++)
+			if(list.get(i).compareTo(list.get(u)) < 0)
 				{
-				
+					tmp = list.get(i);
+					list.set(i, list.get(u));
+					list.set(u, tmp);
 				}
-			}
+		}
 	}
 }
