@@ -3,7 +3,7 @@ public class Main {
 	
 	
 	/**
-	 * @param args
+	 * @author Brandon Warbelton
 	 */
 	public static void main(String [] args) 
 	{
