@@ -35,6 +35,10 @@ public class Main {
 		printArrayList(sentenceList);
 		removeDuplicates(sentenceList);
 		printArrayList(sentenceList);
+		addWord(sentenceList, "maple");
+		addWord(sentenceList, "able");
+		addWord(sentenceList, "zebra");
+		printArrayList(sentenceList);
 	}
 
 	public static void printArrayList(ArrayList<String> list)
@@ -79,6 +83,26 @@ public class Main {
 					{
 						list.remove(i);
 						i--;
+					}
+			}
+		}
+	}
+	
+	public static void addWord(ArrayList<String> list, String word)
+	{
+		String tmp = "";
+		list.add(word);
+		
+		
+		for(int i = list.size() - 1; i >= 0; i--)
+		{
+			for(int u = i - 1; u >= 0; u--)
+			{
+				if(list.get(i).compareTo(list.get(u)) < 0)
+					{
+						tmp = list.get(i);
+						list.set(i, list.get(u));
+						list.set(u, tmp);
 					}
 			}
 		}
