@@ -33,6 +33,8 @@ public class Main {
 		printArrayList(sentenceList);
 		sort(sentenceList);
 		printArrayList(sentenceList);
+		removeDuplicates(sentenceList);
+		printArrayList(sentenceList);
 	}
 
 	public static void printArrayList(ArrayList<String> list)
@@ -56,12 +58,28 @@ public class Main {
 		for(int i = 1; i < list.size(); i++)
 		{
 			for(int u = 0; u < list.size(); u++)
-			if(list.get(i).compareTo(list.get(u)) < 0)
-				{
-					tmp = list.get(i);
-					list.set(i, list.get(u));
-					list.set(u, tmp);
-				}
+			{
+				if(list.get(i).compareTo(list.get(u)) < 0)
+					{
+						tmp = list.get(i);
+						list.set(i, list.get(u));
+						list.set(u, tmp);
+					}
+			}
+		}
+	}
+	
+	public static void removeDuplicates(ArrayList<String> list)
+	{
+		for(int i = 1; i < list.size(); i++)
+		{
+			for(int u = 0; u < list.size(); u++)
+			{
+				if(list.get(i).compareToIgnoreCase(list.get(u)) == 0)
+					{
+						list.remove(i);
+					}
+			}
 		}
 	}
 }
