@@ -78,6 +78,7 @@ public class Main {
 				if(list.get(i).compareToIgnoreCase(list.get(u)) == 0)
 					{
 						list.remove(i);
+						i--;
 					}
 			}
 		}
