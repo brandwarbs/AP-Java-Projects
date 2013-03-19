@@ -71,9 +71,9 @@ public class Main {
 	
 	public static void removeDuplicates(ArrayList<String> list)
 	{
-		for(int i = 1; i < list.size(); i++)
+		for(int i = 0; i < list.size(); i++)
 		{
-			for(int u = 0; u < list.size(); u++)
+			for(int u = i + 1; u < list.size(); u++)
 			{
 				if(list.get(i).compareToIgnoreCase(list.get(u)) == 0)
 					{
