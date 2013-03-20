@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		ArrayList<String> sentenceList = new ArrayList<String>();
-		String sentence = "The big black bear and the big black dog ran down the road";
+		String sentence = "the big black bear and the big black dog ran down the road";
 		String tmpString = "";
 		
 		//converts a string to an arraylist
@@ -45,6 +45,7 @@ public class Main {
 		printArrayList(sentenceList);
 	}
 
+	//method takes an arraylist as a parameter and prints it
 	public static void printArrayList(ArrayList<String> list)
 	{
 		String str = "";
@@ -59,6 +60,7 @@ public class Main {
 		System.out.println(str);
 	}
 	
+	//method takes an arraylist as a parameter and sorts it alphabetically
 	public static void sort(ArrayList<String> list)
 	{
 		String tmp = "";
@@ -77,6 +79,7 @@ public class Main {
 		}
 	}
 	
+	//method takes an arraylist as a parameter and removes duplicate words
 	public static void removeDuplicates(ArrayList<String> list)
 	{
 		for(int i = 0; i < list.size(); i++)
@@ -92,6 +95,7 @@ public class Main {
 		}
 	}
 	
+	//method takes an arraylist and a word as a parameter and adds the word
 	public static void addWord(ArrayList<String> list, String word)
 	{
 		String tmp = "";
