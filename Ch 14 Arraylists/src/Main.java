@@ -12,6 +12,7 @@ public class Main {
 		String sentence = "The big black bear and the big black dog ran down the road";
 		String tmpString = "";
 		
+		//converts a string to an arraylist
 		for(int i = 0; i < sentence.length(); i++)
 		{
 			if(sentence.charAt(i) == ' ')
@@ -29,15 +30,18 @@ public class Main {
 			}
 		}
 		
-		
+		System.out.println("Original:");
 		printArrayList(sentenceList);
 		sort(sentenceList);
+		System.out.println("Sorted:");
 		printArrayList(sentenceList);
 		removeDuplicates(sentenceList);
+		System.out.println("Duplicates Removed:");
 		printArrayList(sentenceList);
 		addWord(sentenceList, "maple");
 		addWord(sentenceList, "able");
 		addWord(sentenceList, "zebra");
+		System.out.println("Words Added:");
 		printArrayList(sentenceList);
 	}
 
@@ -108,3 +112,14 @@ public class Main {
 		}
 	}
 }
+
+/*
+Original:
+The big black bear and the big black dog ran down the road
+Sorted:
+The and bear big big black black dog down ran road the the
+Duplicates Removed:
+and bear big black dog down ran road the
+Words Added:
+able and bear big black dog down maple ran road the zebra
+*/
